@@ -1,0 +1,20 @@
+--- localcharset.c  2016-12-02 13:55:29.000000000 +0100
++++ libiconv-1.15/libcharset/lib/localcharset.c 2019-04-15 17:16:29.000000000 +0200
+@@ -44,7 +44,7 @@
+ # endif
+ #endif
+ 
+-#if !defined WINDOWS_NATIVE
++#if !defined WINDOWS_NATIVE && !defined __ANDROID__
+ # include <unistd.h>
+ # if HAVE_LANGINFO_CODESET
+ #  include <langinfo.h>
+@@ -395,7 +395,7 @@
+   const char *codeset;
+   const char *aliases;
+ 
+-#if !(defined WINDOWS_NATIVE || defined OS2)
++#if !(defined WINDOWS_NATIVE || defined OS2 || defined __ANDROID__)
+ 
+ # if HAVE_LANGINFO_CODESET
+ 
