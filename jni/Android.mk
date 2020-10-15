@@ -18,7 +18,7 @@ LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/libiconv-1.15/libcharset  \
     $(LOCAL_PATH)/libiconv-1.15/libcharset/include
 LOCAL_SRC_FILES := \
-    $(LOCAL_PATH)/libiconv-1.15/lib/iconv.c \
-    $(LOCAL_PATH)/libiconv-1.15/lib/relocatable.c \
-    $(LOCAL_PATH)/libiconv-1.15/libcharset/lib/localcharset.c
+    libiconv-1.15/lib/iconv.c \
+    libiconv-1.15/lib/relocatable.c \
+    libiconv-1.15/libcharset/lib/localcharset.c
 include $(BUILD_STATIC_LIBRARY)
